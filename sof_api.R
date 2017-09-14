@@ -19,7 +19,7 @@ request = RCurl::getURLContent(credores_url, curl = getCurlHandle(.opts = url_he
 
 lstCredores <- data.frame()
 
-for(i in length(request$lstCredores)){
+for(i in 1:length(request$lstCredores)){
   row <- request$lstCredores[[i]] %>%
     as.character() %>% 
     unlist() %>% 
