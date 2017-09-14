@@ -26,6 +26,6 @@ for(i in 1:length(request$lstCredores)){
     as.data.frame() %>% 
     t.data.frame() %>% 
     as.data.frame()
-  lstCredores <- rbind(lstCredores, row)
+  lstCredores <- bind_rows(lstCredores, row)
 }
 
