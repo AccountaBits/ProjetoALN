@@ -9,7 +9,7 @@ paths <- read_excel("/home/leonardo/Desktop/RSOF/paths.xlsx")
 path_list <- as.list(paths$urlPattern)
 
 RESTResources <- function(){
-  for(i in 1:seq_along(path_list)){
+  for(i in seq_along(path_list)){
     path <- path_list[i]
     url_path <- paste0(url_request, path)
     print(url_path)
