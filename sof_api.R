@@ -13,8 +13,7 @@ url_headers <- list(httpheader = c("Accept: application/json", "Authorization: B
 
 credores_url <- paste0(url_request, "/consultarCredores")
 
-request = RCurl::getURLContent(credores_url, curl = getCurlHandle(.opts = url_headers),
-                               .encoding = "UTF-8") %>% 
+request = RCurl::getURLContent(credores_url, curl = getCurlHandle(.opts = url_headers), .encoding = "UTF-8") %>% 
   RJSONIO::fromJSON()
 
 
